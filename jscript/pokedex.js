@@ -1,14 +1,13 @@
 function logic() {
 
     // First thing to do is get input from user
-    let adrian = prompt("is working");
     let name = document.getElementById("name");
     let type = document.getElementById("type");
     let region = document.getElementById("region");
 
 
     // Will only give objects
-    console.log( name + " - " + type + " - " + region + " region") // remove once you have clear understanding
+    console.log( name + " name" + type + " type " + region + " region") // remove once you have clear understanding
 
 
     // Get String values of variables
@@ -25,14 +24,20 @@ function logic() {
  *---------------------------------------------*/
 
     /* --- Part 1 : Create pokemon data Object --- */
-    function validateForm() {
-        var x = document.forms["myForm"]["name"].value;
-        if (x == "") {
+    const pokemon = document.getElementById("name").value;
+  
+
+        if (pokemon == "") {
           alert("Name must be filled out");
           return false;
         }
-      }
- 
+
+      const pokemonData = document.createElement("span");
+
+      span = Object.assign({}, [name]+ [type]+ [region]);
+      console.log(span)
+      
+
 
 				// Use If to ensure input validation (ensure input fields are !empty)
         // Create pokemon object here (const pokemon) using user input Strings
