@@ -17,33 +17,47 @@ function logic() {
     
 
     // Can log them since they are now pure Strings
-    console.log( name + " - " + type + " - " + region + " region") // remove once you have clear understanding
+    console.log( name + " name " + type + " type" + region + " region") // remove once you have clear understanding
 
 /*-----------------------------------------------
  * Add your solution code here
  *---------------------------------------------*/
 
     /* --- Part 1 : Create pokemon data Object --- */
-    const pokemon = document.getElementById("name").value;
-  
+    const pokemonName = name;
+    const pokemonType = type;
+    const pokemonRegin =region;
+    console.log(name,type,region)
 
-        if (pokemon == "") {
-          alert("Name must be filled out");
+    // Use If to ensure input validation (ensure input fields are !empty)
+        if (pokemonName == "") {
+          alert("Pokemon name must be filled out");
           return false;
         }
 
-      const pokemonData = document.createElement("span");
+    
 
-      span = Object.assign({}, [name]+ [type]+ [region]);
-      console.log(span)
+     
+
+       // Create pokemon object here (const pokemon) using user input Strings
+
+      const pokemon = {name:'name', type:'type' ,region:'region'};
       
+       // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
+
+       const pokemonData = document.createElement("span");
+       const namepokemon = document.createTextNode(namepokemon.name);
+       pokemonData.appendChild(pokemonName);
+
+   
+       
 
 
-				// Use If to ensure input validation (ensure input fields are !empty)
-        // Create pokemon object here (const pokemon) using user input Strings
+				
+       
 
 
-        // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
+       
 
 
 
