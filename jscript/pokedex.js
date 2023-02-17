@@ -26,7 +26,7 @@ function logic() {
     /* --- Part 1 : Create pokemon data Object --- */
     const pokemonName = name;
     const pokemonType = type;
-    const pokemonRegin =region;
+    const pokemonRegion =region;
     console.log(name,type,region)
 
     // Use If to ensure input validation (ensure input fields are !empty)
@@ -46,30 +46,39 @@ function logic() {
        // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
 
        const pokemonData = document.createElement("span");
-       const namepokemon = document.createTextNode(namepokemon.name);
-       pokemonData.appendChild(pokemonName);
 
-   
+        const namePokemon = document.createTextNode(pokemonName.name);
+       pokemonData.appendChild(namePokemon);
+
+       const typePokemon = document.createTextNode(pokemon.type);
+       pokemonData.appendChild(typePokemon);
+
+       const regionPokemon = document.createTextNode(pokemon.region);
+       pokemonData.appendChild(regionPokemon);
+
+       console.log(pokemonData);
+
        
-
-
-				
-       
-
-
-       
-
-
 
     /* --- Part 2 : Creating other DOM Objects --- */
         
         // Create HTML li element here (const pokedexEntry)
 
+        pokedexEntry = document.createElement(li).value;
 
-        // Give pokedexEntry (li) a new class equal to the "type" property of the pokemon object
+// Give pokedexEntry (li) a new class equal to the "type" property of the pokemon object
+        pokedexEntry.className = pokemon.type
+
+
+        
+
+
+        
 
 
         // Creating a preview button (using a Template Literal)
+        const prebutton = '<button></button>'
+        
         // this code is for an html form that will Google search the name of the pokemon
         const previewButton = `
             <form action="http://google.com/search" target="_blank">
