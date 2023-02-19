@@ -4,6 +4,7 @@ function logic() {
     let name = document.getElementById("name");
     let type = document.getElementById("type");
     let region = document.getElementById("region");
+   
 
 
     // Will only give objects
@@ -17,8 +18,8 @@ function logic() {
     
 
     // Can log them since they are now pure Strings
-    console.log( name + " name " + type + " type" + region + " region") // remove once you have clear understanding
-
+    console.log( name +" "+ " name "+" " + type + " type" + region + " region") // remove once you have clear understanding
+  
 /*-----------------------------------------------
  * Add your solution code here
  *---------------------------------------------*/
@@ -27,6 +28,7 @@ function logic() {
     const pokemonName = name;
     const pokemonType = type;
     const pokemonRegion =region;
+    
     console.log(name,type,region)
 
     // Use If to ensure input validation (ensure input fields are !empty)
@@ -41,22 +43,24 @@ function logic() {
 
        // Create pokemon object here (const pokemon) using user input Strings
 
-      const pokemon = {name:'name', type:'type' ,region:'region'};
+      const pokemon = name +" "+ type +" " + region;
+      
       
        // Create a span element (const pokemonData) and put the pokemon objects properties inside of it
 
        const pokemonData = document.createElement("span");
 
-        const namePokemon = document.createTextNode(pokemonName.name);
+        const namePokemon = document.createTextNode(name+" ");
        pokemonData.appendChild(namePokemon);
 
-       const typePokemon = document.createTextNode(pokemon.type);
+       const typePokemon = document.createTextNode(type+" ");
        pokemonData.appendChild(typePokemon);
 
-       const regionPokemon = document.createTextNode(pokemon.region);
+       const regionPokemon = document.createTextNode(region);
        pokemonData.appendChild(regionPokemon);
+       console.log(pokemonData)
 
-       console.log(pokemonData);
+      
 
        
 
@@ -64,10 +68,12 @@ function logic() {
         
         // Create HTML li element here (const pokedexEntry)
 
-        pokedexEntry = document.createElement(li).value;
+  const pokedexEntry = document.createElement("li");
+  console.log(pokedexEntry);
 
 // Give pokedexEntry (li) a new class equal to the "type" property of the pokemon object
-        pokedexEntry.className = pokemon.type
+        pokedexEntry.className = type
+        console.log(pokedexEntry);
 
 
         
@@ -91,13 +97,22 @@ function logic() {
     /* --- Part 3 : Add things into the DOM --- */
 
         // Firstly append pokemonData to the innerHTML of pokedexEntry
+        pokedexEntry.appendChild(pokemonData)
+        console.log(pokedexEntry)
+        
+
+
 
 
         // Secondly append the previewButton to innerHTML of pokedexEntry
 
+        pokedexEntry.innerHTML += previewButton
+
 
         // Lastly we will get the ul List element that is meant to contain all pokedex entries
         // The we will append pokedexEntry to the innerHTML of the pokedexEntries ul element
+
+        document.getElementById("pokedex-entries").appendChild(pokedexEntry);
 
 
 /*-----------------------------------------------

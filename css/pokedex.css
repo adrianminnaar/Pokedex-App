@@ -26,7 +26,49 @@
 .electric {
     background-color: rgb(238, 212, 98);
 }
+.flying{
+    background-color: blue;
+}
+.fighting{
+    background-color: red;
+}
 
+.poison{
+    background-color: green;
+}
+.ground{
+    background-color: rgb(86, 145, 75);
+
+}
+.rock{
+    background-color: brown;
+}
+
+.psychic{
+    background-color: beige;
+}
+
+.bug{
+    background-color: blueviolet;
+}
+
+.ghost{
+    background-color: whitesmoke;
+}
+.steel{
+    background-color: grey;
+}
+
+.dragon{
+    background-color: orange;
+}
+
+.dark{
+    background-color: darkgrey;
+}
+.fairy{
+    background-color: pink;
+}
 
 /* ------------------------------------------
 *   Layouts
