@@ -75,6 +75,10 @@ function logic() {
         pokedexEntry.className = type
         console.log(pokedexEntry);
 
+        const pokedexMemory = [name, type, region];
+        console.log(pokedexMemory)
+
+
 
         
 
